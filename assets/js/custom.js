@@ -61,4 +61,18 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
+	ribbon_edges();
+	$( window ).resize(function() {
+	   ribbon_edges();
+	});
+
+
+	function ribbon_edges() {
+		var img = $("img.ribbon-edge").outerWidth();
+		var a = parseInt(img) - 2;
+		var wi = '-' + a + 'px';
+		$("img.ribbon-edge.left").css('left',wi);
+		$("img.ribbon-edge.right").css('right',wi);
+	}
+
 });// END #####################################    END

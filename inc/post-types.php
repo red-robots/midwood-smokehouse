@@ -6,11 +6,11 @@ add_action('init', 'js_custom_init', 1);
 function js_custom_init() {
     $post_types = array(
         array(
-            'post_type' => 'events',
-            'menu_name' => 'Events',
-            'plural'    => 'Events',
-            'single'    => 'Event',
-            'menu_icon' => 'dashicons-star-filled',
+            'post_type' => 'testimonial',
+            'menu_name' => 'Testimonials',
+            'plural'    => 'Testimonials',
+            'single'    => 'Testimonial',
+            'menu_icon' => 'dashicons-editor-quote',
             'supports'  => array('title','editor','thumbnail')
         ),
     );
