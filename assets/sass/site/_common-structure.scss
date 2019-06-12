@@ -1,0 +1,278 @@
+div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
+	overflow-wrap: normal;
+    word-wrap: normal;
+    -ms-word-break: normal;
+    word-break: normal;
+    word-break: normal;
+    -ms-hyphens: none;
+    -moz-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+    page-break-inside: avoid;
+}
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.clear:before, .clear:after { content: " "; display: table; }
+.clear { *zoom: 1; }
+.clear {clear: both;}
+body {
+	position: relative;
+	background: url("images/darkwood.png") top center repeat-x;
+	background-color: #000;
+	color: #FFF;
+}
+.smokebg {
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	.smoke {
+		width: 350%;
+		height: 100%;
+		float: left;
+		background: url("images/smoke2.png") top left repeat-x;
+		background-size:contain;
+	}
+}
+.text-center {text-align:center;}
+.site {
+	position: relative;
+	z-index: 5;
+}
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0px auto;
+	padding: 0 20px;
+	position: relative;
+}
+
+.content-area {
+	width: 100%;
+	margin: 0px auto;
+	@include tab {
+		width: 66%;
+		float: left;
+		margin: 0;
+	}
+}
+
+.widget-area {
+	width: 100%;
+	margin: 0px auto;
+
+	@include tab {
+		width: 26%;
+		float: right;
+		margin: 0;
+	}
+}
+
+/* Logo */
+.logowrap {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+.logo {
+	display: inline-block;
+	margin: 0 auto;
+	width: 180px;
+	padding: 34px 0 30px;
+	@include tab {
+		width: 200px;
+		padding: 30px 0;
+	}
+	a, img {
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+}
+.orderNowBtn {
+	cursor: pointer;
+	display: block;
+	width: 72px;
+	height: 58px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-decoration: none;
+	font-family: $font_heading;
+	font-size: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #FFF;
+	line-height: 1;
+    text-align: center;
+    padding: 18px 0 5px 0;
+    * {
+    	cursor: pointer;
+    }
+	span.lbl {
+		position: absolute;
+		top: 18px;
+		left: 0;
+		width: 100%;
+		cursor: pointer;
+		z-index: 10;
+	}
+	span.ribbon {
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 5;
+	}
+	span.ribbon:before,
+	span.ribbon:after {
+		content: "";
+		display: block;
+		position: absolute;
+		@include transition(all ease-out .3s);
+	}
+	span.ribbon:before {
+		width: 100%;
+		height: 100%;
+		background: $color-orange;
+		top: 0;
+		left: 0;
+		z-index: 5;
+	}
+	span.ribbon:after {
+		left: 0;
+		bottom: -30px;
+		border: 36px solid $color-orange;
+    	border-top-width: 20px;
+    	border-bottom: 25px solid transparent;
+	}
+
+	span.shadowL {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 130%;
+		z-index: 2;
+		top: -15px;
+		left: -6px;
+		transform: rotate(-35deg);
+	}
+	span.shadowL:before {
+		content:"";
+		display: block;
+		width: 62%;
+		height: 100%;
+		position: absolute;
+		bottom: 0;
+	}
+	span.shadowL:before {
+		background: #FFF;
+   		transform: skew(-35deg);
+   		box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+	}
+
+	span.shadowR {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 130%;
+		z-index: 2;
+		top: -15px;
+		right: -7px;
+		transform: rotateY(180deg);
+	}
+	span.shadowR span {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		transform: rotate(-35deg);
+	}
+	span.shadowR span:before {
+		content:"";
+		display: block;
+		width: 62%;
+		height: 100%;
+		position: absolute;
+		bottom: 0;
+	}
+	span.shadowR span:before {
+		background: #FFF;
+   		transform: skew(-35deg);
+   		box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+	}
+
+	&:before, &:after {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		text-shadow: 0 2px 2px red;
+		z-index: 3;
+	}
+
+	&:before {
+		background: #FFF;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	&:after {
+		left: 0;
+		bottom: -32px;
+		border: 36px solid #FFF;
+    	border-top-width: 20px;
+    	border-bottom: 25px solid transparent;
+	}
+	&:hover {
+		color: #FFF;
+		padding-top: 10px;
+		span.ribbon:before {
+			width: 100%;
+			height: 100%;
+			background: #ff882c;
+			top: 0;
+			left: 0;
+			z-index: 5;
+		}
+		span.ribbon:after {
+			left: 0;
+			bottom: -30px;
+			border: 36px solid #ff882c;
+	    	border-top-width: 20px;
+	    	border-bottom: 25px solid transparent;
+		}
+	}
+}
+.site-header {
+	position: relative;
+	z-index: 20;
+	.row1 {
+		overflow: hidden;
+	}
+}
+.site-footer {
+	width: 100%;
+	clear: both;
+}
+
+.move-r-l{bottom:15%;
+position:absolute;
+animation: slide 60s linear infinite;
+}     
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-1700px, 0, 0);
+  }
+}
