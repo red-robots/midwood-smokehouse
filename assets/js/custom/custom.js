@@ -75,4 +75,21 @@ jQuery(document).ready(function ($) {
 		$("img.ribbon-edge.right").css('right',wi);
 	}
 
+	$(document).on("click",".orderNowBtn",function(e){
+		e.preventDefault();
+		$(".orderNowInfo").toggleClass('open');
+		$(this).toggleClass('active');
+		if( $(this).hasClass('active') ) {
+			$(this).find('span.lbl').text('CLOSE');
+		} else {
+			$(this).find('span.lbl').text('ORDER NOW');
+		}
+	});
+
+	$(document).on("click",".menu-toggle",function(e){
+		e.preventDefault();
+		$("#site-navigation").toggleClass('open');
+		$(this).toggleClass('open');
+	});
+
 });// END #####################################    END

@@ -32,12 +32,33 @@ body.home .site-content.wrapper {
 	padding-right: 0;
 }
 .locations-section {
-	background:url("images/pig.png") bottom center no-repeat;
-	background-size: cover;
-	padding-top: 140px;
-	padding-bottom: 60px;
-	margin-top: -120px;
+	padding-top: 20px;
+	padding-bottom: 70px;
+	&:after {
+		content:"";
+		display: block;
+		width: 100%;
+		height: 40%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background:url("images/pig.png") bottom center no-repeat;
+		background-size: cover;
+		@include tab {
+			height: 140%;
+		}
+		@include desk {
+			width: 100%;
+			height: 160%;
+			margin-top: -140px;
+		}
+	}
+	.innerpad {
+		position: relative;
+		z-index: 10;
+	}
 	.flexrow {
+		position: relative;
 		@include tab {
 			@include flexbox-justify(center);
 		}
@@ -79,19 +100,31 @@ body.home .site-content.wrapper {
 	position: relative;
 	top: -12px;
 	z-index: 8;
+	.wrapper {
+		width: 80%;
+		@include tab {
+			width: 100%;
+		}
+	}
 	.midwrap {
 		padding: 50px 0 45px;
 		max-width: 600px;
 		width: 100%;
 		margin: 0 auto;
+		@include desk {
+			padding: 65px 0 60px;
+		}
 	}
 	.testimonial {
 		color: $color-orange;
 		font-weight: 800;
 		font-style: italic;
-		font-size: 1.4em;
+		font-size: 1.1em;
 		line-height: 1.3;
 		position: relative;
+		@include tab {
+			font-size: 1.4em;
+		}
 		p {
 			margin-top: 0;
 			margin-bottom: 5px;
@@ -124,12 +157,20 @@ body.home .site-content.wrapper {
 }
 .order-online-section {
 	padding-top: 60px;
-	padding-bottom: 50px;
+	padding-bottom: 60px;
 	padding-left: 20px;
 	padding-right: 20px;
 	@include tab {
 		padding-left: 0;
 		padding-right: 0;
+	}
+	.wrapper {
+		padding-left: 50px;
+		padding-right: 50px;
+		@include desk {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 	}
 }
 .fork-title {
@@ -184,22 +225,44 @@ body.home .site-content.wrapper {
 	}
 	.inside {
 		color: #FFF;
-		background: $color-orange;
 		padding: 20px 20px 16px;
+		background-color: $color-orange;
+		background-size: 3%;
+		background-position: center;
+		background-repeat: no-repeat;
+		@include tab {
+			background-image:url("images/arrow.png");
+			background-size: 3%;
+		}
+		@include mid {
+			background-size: 8%;
+		}
 	}
 	.dl {
 		font-family: $font-heading;
 		font-weight: 700;
-		font-size: 30px;
+		font-size: 22px;
 		line-height: 1;
 		text-transform: uppercase;
+		@include mid {
+			font-size: 25px;
+		}
+		@include desk {
+			font-size: 30px;
+		}
 	}
 	.dtxt1 {
 		color: #FFF;
 	}
 	.dtxt2 {
 		color: #000;
-		font-size: 28px;
+		font-size: 21px;
+		@include mid {
+			font-size: 24px;
+		}
+		@include desk {
+			font-size: 28px;
+		}
 	}
 	.flexrow {
 		@include flexbox-align-content(center);
@@ -219,17 +282,17 @@ body.home .site-content.wrapper {
 	}
 	.col1 {
 		@include tab {
-			&:before {
-				content:"";
-				display: block;
-				width: 50px;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				right: -10px;
-				background:url("images/arrow.png") right center no-repeat;
-				background-size: contain;
-			}
+			// &:before {
+			// 	content:"";
+			// 	display: block;
+			// 	width: 50px;
+			// 	height: 100%;
+			// 	position: absolute;
+			// 	top: 0;
+			// 	right: -10px;
+			// 	background:url("images/arrow.png") right center no-repeat;
+			// 	background-size: contain;
+			// }
 		}
 	}
 	.col2 {
@@ -248,14 +311,70 @@ body.home .site-content.wrapper {
 	}
 	.applogo {
 		display: inline-block;
-		margin-right: 15px;
+		margin-right: 0;
+		padding-left: 10px;
+		padding-right: 10px;
+		@include tab {
+			margin-right: 15px;
+			padding-left: 0;
+			padding-right: 0;
+		}
 		img {
 			width: auto;
-			height: 45px;
-			@include tab {
+			height: 40px;
+			@include desk {
 				height: 60px;
 				float: left;
 			}
+		}
+	}
+}
+.partners-text {
+	max-width: 660px;
+	width: 100%;
+	margin: 0 auto;
+	color: $color-orange;
+	font-size: 18px;
+}
+.partners {
+	padding-top: 20px;
+	padding-bottom: 30px;
+	.flexrow {
+		@include flexbox();
+		@include flexbox-align-items(center);
+		@include flexbox-justify(center);
+		@include flexbox-wrap(wrap);
+	}
+	.info {
+		display: inline-block;
+		padding: 0 15px;
+		width: 40%;
+		text-align: center;
+		@include tab {
+			width: auto;
+			padding: 20px;
+		}
+	}
+	.info img {
+		width: 100%;
+		height: auto;
+		@include tab {
+			width: auto;
+			height: 90px;
+		}
+	}
+}
+.default-theme {
+	.site-main {
+		min-height: 25em;
+	}
+	.entry-header {
+		text-align: center;
+		h1 {
+			font-family: $font-heading;
+			font-weight: 600;
+			font-size: 35px;
+			margin: 10px 0;
 		}
 	}
 }

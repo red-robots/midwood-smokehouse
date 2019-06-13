@@ -24,20 +24,29 @@ body {
 	background-color: #000;
 	color: #FFF;
 }
+a,.btn,input[type="submit"],button {
+	@include transition(all ease-out .3s);
+}
+.sr-only {
+	display: none;
+}
 .smokebg {
 	width: 100%;
-	height: 450px;
+	height: 400px;
 	overflow: hidden;
 	opacity: 0.5;
 	position: absolute;
 	top: 0;
 	left: 0;
+	@include tab {
+		height: 450px;
+	}
 	.smoke {
 		width: 350%;
 		height: 100%;
 		float: left;
 		background: url("images/smoke2.png") top left repeat-x;
-		background-size:contain;
+		background-size: cover;
 	}
 }
 .text-center {text-align:center;}
@@ -83,7 +92,7 @@ body {
 .logo {
 	display: inline-block;
 	margin: 0 auto;
-	width: 180px;
+	width: 165px;
 	padding: 34px 0 30px;
 	@include tab {
 		width: 200px;
@@ -95,14 +104,68 @@ body {
 		float: left;
 	}
 }
+.orderNowInfo {
+	width: 230px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 30;
+	transform: translateY(-86%);
+	@include transition(all ease-out .3s);
+	&.open {
+		transform: translateY(0);
+	}
+	.orderNowText {
+		width: 100%;
+		background: #FFF;
+		box-shadow: 0px -5px 11px 0px rgba(0,0,0,0.75);
+		position: relative;
+		z-index: 11;
+	}
+	.o-info {
+		cursor: pointer;
+		text-decoration: none;
+		display: block;
+		padding: 20px 20px 10px;
+		background: transparent;
+		@include transition(all ease-out .3s);
+		&.logo2 {
+			padding-bottom: 20px;
+		}
+		&:hover {
+			background: #e9e8e8;
+		}
+	}
+	.o-info img {
+		width: 90px;
+		height: auto;
+	}
+	.imgwrap {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	.details {
+		display: block;
+		width: 100%;
+		text-align: center;
+		font-size: 14px;
+		line-height: 1.5;
+		.txt1 {
+			color: #000;
+		}
+		.txt2 {
+			color: $color-orange;
+		}
+	}
+}
 .orderNowBtn {
 	cursor: pointer;
 	display: block;
 	width: 72px;
 	height: 58px;
-	position: absolute;
+	position: relative;
 	top: 0;
-	right: 0;
 	text-decoration: none;
 	font-family: $font_heading;
 	font-size: 18px;
@@ -112,6 +175,12 @@ body {
 	line-height: 1;
     text-align: center;
     padding: 18px 0 5px 0;
+    float: right;
+    margin-right: 26px;
+    @include tab {
+    	float: none;
+    	margin: 0 auto;
+    }
     * {
     	cursor: pointer;
     }
@@ -120,12 +189,17 @@ body {
 		top: 18px;
 		left: 0;
 		width: 100%;
+		height: 40px;
 		cursor: pointer;
 		z-index: 10;
+		text-align: center;
+		@include flexbox();
+		@include flexbox-justify(center);
+		@include flexbox-align-items(center);
 	}
 	span.ribbon {
 		display: block;
-		width: 100%;
+		width: 72px;
 		height: 100%;
 		position: absolute;
 		top: 0;
@@ -136,11 +210,11 @@ body {
 	span.ribbon:after {
 		content: "";
 		display: block;
+		width: 72px;
 		position: absolute;
 		@include transition(all ease-out .3s);
 	}
 	span.ribbon:before {
-		width: 100%;
 		height: 100%;
 		background: $color-orange;
 		top: 0;
@@ -186,7 +260,7 @@ body {
 		height: 130%;
 		z-index: 2;
 		top: -15px;
-		right: -7px;
+		right: -6px;
 		transform: rotateY(180deg);
 	}
 	span.shadowR span {
@@ -236,32 +310,35 @@ body {
 		color: #FFF;
 		padding-top: 10px;
 		span.ribbon:before {
-			width: 100%;
-			height: 100%;
 			background: #ff882c;
-			top: 0;
-			left: 0;
-			z-index: 5;
 		}
 		span.ribbon:after {
-			left: 0;
-			bottom: -30px;
 			border: 36px solid #ff882c;
 	    	border-top-width: 20px;
 	    	border-bottom: 25px solid transparent;
+		}
+	}
+	&:hover,&:focus,&:active {
+		* {
+			color: #FFF!important;
+		}
+	}
+	&.active {
+		top: -18px;
+		span.lbl {
+			top: 24px;
 		}
 	}
 }
 .site-header {
 	position: relative;
 	z-index: 20;
-	.row1 {
-		overflow: hidden;
-	}
 }
 .site-footer {
 	width: 100%;
-	clear: both;
+	height: 50px;
+	border-top: 5px solid $color-orange;
+	background:url("images/midwood-pattern2.png") top center repeat;
 }
 
 .move-r-l{bottom:15%;

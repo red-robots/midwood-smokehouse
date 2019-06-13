@@ -3,26 +3,28 @@ get_header();
 ?>
 <main id="main" class="site-main clear" role="main">
 	<?php while ( have_posts() ) : the_post(); ?>
-	<div class="locations-section wrapper clear">
-		<h3 class="row-title text-center">Locations</h3>
-		<?php  
-		$locations = get_field('locations');
-		if($locations) { ?>
-		<div class="fullwrap">
-			<div class="flexrow">
-				<?php foreach ($locations as $row) { 
-				$name = $row['name'];
-				$address = $row['address']; ?>
-					<?php if ($name && $address) { ?>
-					<div class="flexbox location-info">
-						<h3 class="name"><?php echo $name; ?></h3>
-						<div class="address"><?php echo $address; ?></div>
-					</div>
+	<div class="locations-section wrapper">
+		<div class="innerpad clear">
+			<h3 class="row-title text-center">Locations</h3>
+			<?php  
+			$locations = get_field('locations');
+			if($locations) { ?>
+			<div class="fullwrap">
+				<div class="flexrow">
+					<?php foreach ($locations as $row) { 
+					$name = $row['name'];
+					$address = $row['address']; ?>
+						<?php if ($name && $address) { ?>
+						<div class="flexbox location-info">
+							<h3 class="name"><?php echo $name; ?></h3>
+							<div class="address"><?php echo $address; ?></div>
+						</div>
+						<?php } ?>
 					<?php } ?>
-				<?php } ?>
+				</div>
 			</div>
+			<?php } ?>
 		</div>
-		<?php } ?>
 	</div>
 
 	<?php  
@@ -32,7 +34,7 @@ get_header();
 		$content = apply_filters('the_content',$content);
 	}
 	if($testimonial) { ?>
-	<div class="featured-testimonial">
+	<div class="featured-testimonial clear">
 		<div class="wrapper">
 			<div class="midwrap text-center">
 				<?php if ($testimonial->post_content) { ?>
@@ -89,6 +91,31 @@ get_header();
 				</div>
 			</div>
 
+		</div>
+	</div>
+
+	<?php  
+	$partners_text = get_field('partners_text');
+	$partners = get_field('partners');
+	?>
+
+	<div class="partners-section clear">
+		<div class="wrapper">
+			<?php if ($partners_text) { ?>
+			<div class="partners-text text-center"><?php echo $partners_text ?></div>	
+			<?php } ?>
+
+			<?php if ($partners) { ?>
+			<div class="partners fullwrap">
+				<div class="flexrow">
+					<?php foreach ($partners as $p) { ?>
+					<div class="info">
+						<img src="<?php echo $p['url'] ?>" alt="<?php echo $p['title'] ?>" />
+					</div>	
+					<?php } ?>
+				</div>
+			</div>
+			<?php } ?>
 		</div>
 	</div>
 
