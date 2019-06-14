@@ -23,6 +23,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="topDiv"></div>
+<div id="overlaydiv"><a class="closeOverlay" href="#"><i class="far fa-times-circle"></i><span style="display:none;">Close</span></a></div>
 <div class="smokebg">
 	<div class="move-r-l smoke"></div>
 </div>
@@ -97,8 +99,6 @@
 
 	</header><!-- #masthead -->
 
-	<?php if ( is_front_page() || is_home() ) { ?>
-		<?php get_template_part('template-parts/banner') ?>
-	<?php } ?>
+	<?php get_template_part('template-parts/banner') ?>
 
 	<div id="content" class="site-content wrapper">

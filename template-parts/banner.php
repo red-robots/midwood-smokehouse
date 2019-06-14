@@ -1,4 +1,4 @@
-<?php  
+<?php 
 $banner = get_field('banner');
 if($banner) { ?>
 <div class="banner">

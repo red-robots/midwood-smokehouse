@@ -94,31 +94,6 @@ get_header();
 		</div>
 	</div>
 
-	<?php  
-	$partners_text = get_field('partners_text');
-	$partners = get_field('partners');
-	?>
-
-	<div class="partners-section clear">
-		<div class="wrapper">
-			<?php if ($partners_text) { ?>
-			<div class="partners-text text-center"><?php echo $partners_text ?></div>	
-			<?php } ?>
-
-			<?php if ($partners) { ?>
-			<div class="partners fullwrap">
-				<div class="flexrow">
-					<?php foreach ($partners as $p) { ?>
-					<div class="info">
-						<img src="<?php echo $p['url'] ?>" alt="<?php echo $p['title'] ?>" />
-					</div>	
-					<?php } ?>
-				</div>
-			</div>
-			<?php } ?>
-		</div>
-	</div>
-
 	<?php endwhile; ?>
 </main><!-- #main -->
 <?php

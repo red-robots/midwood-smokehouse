@@ -92,4 +92,28 @@ jQuery(document).ready(function ($) {
 		$(this).toggleClass('open');
 	});
 
+	if( $(".iframediv").length > 0 ) {
+		$(".iframediv").each(function(){
+			$(this).appendTo("#topDiv");
+		});
+	}
+
+	$(document).on("click",".iframeData",function(e){
+		e.preventDefault();
+		var id = $(this).attr('href');
+		$(id).toggleClass('open');
+		$("#topDiv").toggleClass('open');
+		$("#overlaydiv").toggleClass('open');
+		$("body").toggleClass('show-iframe');
+	});
+
+	$(document).on("click",".closeOverlay",function(e){
+		e.preventDefault();
+		$(".iframediv").removeClass('open');
+		$("#topDiv").removeClass('open');
+		$("#overlaydiv").removeClass('open');
+		$("body").removeClass('show-iframe');
+	});
+	
+
 });// END #####################################    END
