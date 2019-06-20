@@ -685,5 +685,12 @@ body.page-template-page-menu {
 			margin-top: 25px;
 		}
 	}
+	p a {
+		color: $color-orange;
+		font-weight: 500;
+		&:hover {
+			opacity: 0.45;
+		}
+	}
 }
 

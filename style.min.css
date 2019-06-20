@@ -2003,7 +2003,9 @@ body.page-template-page-menu #content.wrapper{max-width:100%;width:100%;padding:
 .entry-content .textwrap{margin-bottom:30px}
 @media(min-width:900px){.entry-content .textwrap{width:62%;float:left;margin-bottom:0}
 }@media(min-width:900px){.entry-content .imagediv{width:34%;float:right;margin-top:25px}
-}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+}.entry-content p a{color:#c54319;font-weight:500}
+.entry-content p a:hover{opacity:.45}
+.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
