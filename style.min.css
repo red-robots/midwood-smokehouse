@@ -2003,8 +2003,16 @@ body.page-template-page-menu #content.wrapper{max-width:100%;width:100%;padding:
 .entry-content .textwrap{margin-bottom:30px}
 @media(min-width:900px){.entry-content .textwrap{width:62%;float:left;margin-bottom:0}
 }@media(min-width:900px){.entry-content .imagediv{width:34%;float:right;margin-top:25px}
-}.entry-content p a{color:#c54319;font-weight:500}
-.entry-content p a:hover{opacity:.45}
+}.entry-content p a{color:#ff882c;font-weight:500}
+.entry-content p a:hover{opacity:.5}
+.page-link-list{text-align:center}
+.page-link-list ul{text-align:left;margin:0;padding:0;list-style:none}
+.page-link-list ul.linklist{display:inline-block}
+.page-link-list ul.linklist ul{margin-left:18px}
+.page-link-list ul.linklist li{position:relative;padding-left:16px}
+.page-link-list ul.linklist li:before{content:"";display:block;width:5px;height:5px;background:#ff882c;position:absolute;top:9px;left:0}
+.page-link-list ul.linklist a{display:inline-block;text-decoration:none;color:#ff882c;position:relative}
+.page-link-list ul.linklist a:hover{opacity:.45}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

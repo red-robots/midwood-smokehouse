@@ -686,11 +686,49 @@ body.page-template-page-menu {
 		}
 	}
 	p a {
-		color: $color-orange;
+		color: $color-yellow-orange;
 		font-weight: 500;
 		&:hover {
-			opacity: 0.45;
+			opacity: 0.5;
 		}
 	}
 }
 
+.page-link-list {
+	text-align: center;
+	ul {
+		text-align: left;
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+	}
+	ul.linklist {
+		display: inline-block;
+		ul {
+			margin-left: 18px;
+		}
+		li {
+			position: relative;
+			padding-left: 16px;
+			&:before {
+				content:"";
+				display: block;
+				width: 5px;
+				height: 5px;
+				background: $color-yellow-orange;
+				position: absolute;
+				top: 9px;
+				left: 0;
+			}
+		}
+		a {
+			display: inline-block;
+			text-decoration: none;
+			color: $color-yellow-orange;
+			position: relative;
+			&:hover {
+				opacity: 0.45;
+			}
+		}
+	}
+}
