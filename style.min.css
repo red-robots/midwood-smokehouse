@@ -1880,6 +1880,8 @@ a,.btn,input[type="submit"],button{-webkit-transition:all ease-out .3s;transitio
 .text-center{text-align:center}
 .banner{position:relative;z-index:5}
 .banner img{width:100%;height:auto}
+body.subpage .banner{margin-bottom:40px}
+body.subpage .banner img{width:100%;float:left}
 .fullwrap{width:100%;float:left}
 body.home .site-content.wrapper{max-width:100%;padding-left:0;padding-right:0}
 .locations-section{padding-top:20px;padding-bottom:70px}
