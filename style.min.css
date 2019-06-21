@@ -2106,6 +2106,13 @@ body.page-template-page-locations .site-content.wrapper{background:url("images/p
 .btnstyle{display:inline-block}
 .btnstyle a{display:block;text-decoration:none;color:#FFF;padding:10px 20px;background:#c54319;color:#FFF !important;border-radius:5px}
 .btnstyle a:hover{opacity:1 !important;-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
+.social-links{text-align:center;margin-bottom:10px}
+.social-links .wrap{display:inline-block;color:#FFF;font-size:20px;padding:0 10px;position:relative}
+.social-links .wrap .social-info{display:inline-block;z-index:5;width:100%;position:absolute;top:7px;left:0}
+.social-links .wrap img.bg{width:280px;height:auto}
+.social-links .followus{text-transform:uppercase;color:#FFF;font-family:"Rokkitt",serif;font-weight:bold;margin-right:12px}
+.social-links a{display:inline-block;color:#FFF;text-decoration:none;font-size:17px;margin:2px 6px}
+.social-links a:hover{opacity:.45}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

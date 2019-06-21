@@ -987,3 +987,43 @@ body.page-template-page-locations {
 		}
 	}
 }
+.social-links {
+	text-align: center;
+	margin-bottom: 10px;
+	.wrap {
+		display: inline-block;
+		color: #FFF;
+		font-size: 20px;
+		padding: 0 10px;
+		position: relative;
+		.social-info {
+			display: inline-block;
+			z-index: 5;
+			width: 100%;
+			position: absolute;
+			top: 7px;
+			left: 0;
+		}
+		img.bg {
+			width: 280px;
+			height: auto;
+		}
+	}
+	.followus {
+		text-transform: uppercase;
+		color: #FFF;
+		font-family: $font-heading;
+		font-weight: bold;
+		margin-right: 12px;
+	}
+	a {
+		display: inline-block;
+		color: #FFF;
+		text-decoration: none;
+		font-size: 17px;
+		margin: 2px 6px;
+		&:hover {
+			opacity: 0.45;
+		}
+	}
+}

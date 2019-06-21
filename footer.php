@@ -5,7 +5,30 @@
 			<?php  
 			$partners_text = get_field('partners_text','option');
 			$partners = get_field('partners','option');
+			$facebook = get_field('facebook','option');
+			$instagram = get_field('instagram','option');
+			$twitter = get_field('twitter','option');
 			?>
+
+			<?php if ($linkedin || $facebook || $twitter) { ?>
+			<div class="social-links">
+				<div class="wrap">
+					<span class="social-info">
+						<span class="followus">Follow Us</span>
+						<?php if ($facebook) { ?>
+						<a href="<?php echo $facebook ?>" target="_blank"><i class="fab fa-facebook-square"></i><span class="sr-only">Facebook</span></a>
+						<?php } ?>
+						<?php if ($instagram) { ?>
+						<a href="<?php echo $instagram ?>" target="_blank"><i class="fab fa-instagram"></i><span class="sr-only">Instagram</span></a>
+						<?php } ?>
+						<?php if ($twitter) { ?>
+						<a href="<?php echo $twitter ?>" target="_blank"><i class="fab fa-twitter-square"></i><span class="sr-only">Twitter</span></a>
+						<?php } ?>
+					</span>
+					<img class="bg" src="<?php echo get_bloginfo("template_url") ?>/images/social-bg.png" alt="" aria-hidden="true" />
+				</div>
+			</div>
+			<?php } ?>
 
 			<div class="partners-section clear">
 				<div class="wrapper">
