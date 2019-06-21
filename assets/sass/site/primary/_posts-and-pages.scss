@@ -806,6 +806,9 @@ body.page-template-page-dining {
 	}
 }
 .locations-listing {
+	.flexrow {
+		@include flexbox-justify(center);
+	}
 	.details {
 		padding: 20px 30px;
 		position: relative;

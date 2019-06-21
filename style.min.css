@@ -2071,6 +2071,7 @@ body.page-template-page-menu #content.wrapper{max-width:100%;width:100%;padding:
 }.slick-track{height:100%}
 body.page-template-page-dining .site-content.wrapper{max-width:100%;padding-left:0;padding-right:0}
 body.page-template-page-dining .slick-dots{display:none !important}
+.locations-listing .flexrow{-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .locations-listing .details{padding:20px 30px;position:relative;float:left;margin-bottom:10px;width:100%}
 @media(min-width:600px){.locations-listing .details{width:auto;padding:20px 20px;width:50%;float:none}
 }@media(min-width:900px){.locations-listing .details{width:33.333%}
