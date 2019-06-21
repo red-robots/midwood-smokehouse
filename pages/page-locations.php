@@ -41,7 +41,7 @@ get_header(); ?>
 							<div class="address add2"><?php echo $address2 ?></div>	
 							<?php } ?>
 							<?php if ($phone) { ?>
-							<div class="phone"><?php echo $phone ?></div>	
+							<div class="phone"><a href="tel:<?php echo format_phone_number($phone)?>"><?php echo $phone ?></a></div>	
 							<?php } ?>
 							<div class="break clear"></div>
 							<?php if ($map) { ?>
