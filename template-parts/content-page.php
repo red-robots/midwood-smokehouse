@@ -17,12 +17,13 @@
 	<?php if ( get_the_content() ) { ?>
 	<div class="entry-content">
 		<?php
+			ob_start();
 			the_content();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bellaworks' ),
-				'after'  => '</div>',
-			) );
+			$content = ob_get_contents();
+			ob_end_clean();
+			$content = str_replace('[button]','<span class="btnstyle">',$content);
+			$content = str_replace('[/button]','</span>',$content);
+			echo $content;
 		?>
 	</div><!-- .entry-content -->
 	<?php } ?>

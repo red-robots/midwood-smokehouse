@@ -39,6 +39,17 @@ jQuery(document).ready(function ($) {
 		width: '80%', 
 		height: '80%'
 	});
+
+
+	/* Slick Carousel */
+	$('.swiper').slick({
+	  dots: true,
+	  infinite: true,
+	  speed: 300,
+	  slidesToShow: 1,
+	  centerMode: true,
+	  variableWidth: true
+	});
 	
 	
 	/*

@@ -6,6 +6,14 @@ add_action('init', 'js_custom_init', 1);
 function js_custom_init() {
     $post_types = array(
         array(
+            'post_type' => 'location',
+            'menu_name' => 'Locations',
+            'plural'    => 'Locations',
+            'single'    => 'Location',
+            'menu_icon' => 'dashicons-location',
+            'supports'  => array('title','editor','thumbnail')
+        ),
+        array(
             'post_type' => 'testimonial',
             'menu_name' => 'Testimonials',
             'plural'    => 'Testimonials',

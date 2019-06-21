@@ -16,7 +16,7 @@ get_header(); ?>
 
 	<div id="primary" class="full-content-area clear default-theme">
 		<main id="main" class="site-main" role="main">
-
+			<div class="med-wrapper clear">
 			<?php
 			while ( have_posts() ) : the_post();
 
@@ -24,7 +24,7 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

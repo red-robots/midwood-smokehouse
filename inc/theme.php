@@ -90,7 +90,6 @@ add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
   But always use this to get the custom formats
 
 */
- 
 function my_mce_before_init_insert_formats( $init_array ) {  
  
 // Define the style_formats array
@@ -141,6 +140,7 @@ function my_theme_add_editor_styles() {
     add_editor_style( 'editor-style.css' );
 }
 add_action( 'init', 'my_theme_add_editor_styles' );
+
 /*-------------------------------------
   Change Admin Labels
 ---------------------------------------*/
