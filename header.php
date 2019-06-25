@@ -42,7 +42,7 @@ if($tagline) {
 	<?php } ?>
 <?php } ?>
 <?php if ($banner) {  ?>
-<meta property="og:image" content="<?php echo $banner['sizes']['medium_large'] ?>" />	
+<meta property="og:image" content="<?php echo $banner['sizes']['large'] ?>" />	
 <?php } ?>
 
 <script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
