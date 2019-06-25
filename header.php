@@ -18,6 +18,32 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Rokkitt:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<?php $banner = get_field('banner'); ?>
+<?php if ( is_home() || is_front_page() ) { 
+$partners_text = get_field('partners_text','option'); 
+$tagline = get_bloginfo('description');
+$meta_title = get_bloginfo('name');
+if($tagline) {
+	$meta_title = $meta_title . ' - ' . $tagline;
+}
+?>
+<meta property="og:url" content="<?php echo get_site_url(); ?>" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="<?php echo $meta_title; ?>" />
+<meta property="og:description" content="<?php echo $partners_text ?>" />
+<?php } else { ?>
+	<?php if ( get_the_title() ) { ?>
+	<meta property="og:title" content="<?php echo get_the_title(); ?>" />
+	<meta property="og:url" content="<?php echo get_permalink(); ?>" />
+	<?php } ?>
+	<?php if(get_the_content()) { ?>
+	<meta property="og:description"  content="<?php echo get_the_excerpt(); ?>" />
+	<?php } ?>
+<?php } ?>
+<?php if ($banner) { ?>
+<meta property="og:image" content="<?php echo $banner['sizes']['large'] ?>" />	
+<?php } ?>
+
 <script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
 <?php wp_head(); ?>
 </head>
