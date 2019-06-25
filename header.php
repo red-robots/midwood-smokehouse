@@ -40,8 +40,8 @@ if($tagline) {
 	<meta property="og:description"  content="<?php echo get_the_excerpt(); ?>" />
 	<?php } ?>
 <?php } ?>
-<?php if ($banner) { ?>
-<meta property="og:image" content="<?php echo $banner['sizes']['medium_large'] ?>" />	
+<?php if ($banner) {  ?>
+<meta property="og:image" content="<?php echo $banner['sizes']['thumbnail'] ?>" />	
 <?php } ?>
 
 <script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
