@@ -27,7 +27,7 @@ if($tagline) {
 	$meta_title = $meta_title . ' - ' . $tagline;
 }
 ?>
-<meta property="og:url" content="<?php echo get_site_url(); ?>" />
+<meta property="og:url" content="https://midwoodsmokehouse.com/" />
 <meta property="og:title" content="<?php echo $meta_title; ?>" />
 <meta property="og:description" content="<?php echo $partners_text ?>" />
 <?php } else { ?>
