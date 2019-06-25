@@ -18,7 +18,6 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Rokkitt:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-<meta property="og:type" content="website" />
 <?php $banner = get_field('banner'); ?>
 <?php if ( is_home() || is_front_page() ) { 
 $partners_text = get_field('partners_text','option'); 
@@ -31,6 +30,7 @@ if($tagline) {
 <meta property="og:url" content="https://midwoodsmokehouse.com/" />
 <meta property="og:title" content="<?php echo $meta_title; ?>" />
 <meta property="og:description" content="<?php echo $partners_text ?>" />
+<meta property="og:type" content="article" />
 <?php } else { ?>
 	<?php if ( get_the_title() ) { ?>
 	<meta property="og:title" content="<?php echo get_the_title(); ?>" />
