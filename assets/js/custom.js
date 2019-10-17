@@ -40,6 +40,8 @@ jQuery(document).ready(function ($) {
 		height: '80%'
 	});
 
+	
+
 
 	/* Slick Carousel */
 	$('.swiper').slick({

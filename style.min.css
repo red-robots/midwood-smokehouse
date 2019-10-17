@@ -1855,6 +1855,10 @@ div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong{overflow-wrap:normal;word-wrap:normal;-
 .clear:before,.clear:after{content:" ";display:table}
 .clear{*zoom:1}
 .clear{clear:both}
+.popup{text-align:center}
+.popup a{color:#000;text-decoration:none}
+.popup .view-btn{width:auto;display:inline-block;margin:20px auto}
+.popup .view-btn a{width:auto;display:block;background-color:#b60f0f;color:#fff;padding:10px 20px;border-radius:3px;text-decoration:none;color:#fff}
 body{position:relative;background:url("images/darkwood.png") top center repeat-x;background-color:#000;color:#FFF}
 a,.btn,input[type="submit"],button{-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .sr-only{display:none}

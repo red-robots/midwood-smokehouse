@@ -63,6 +63,32 @@ if($tagline) {
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php 
+$active = get_field('toggle_on', 'option');
+$offer = get_field('offer', 'option');
+$btnText = get_field('button_text', 'option');
+$btnLink = get_field('button_link', 'option');
+// echo '<pre>';
+// print_r($active);
+// echo '</pre>';
+ ?>
+<!-- Gift Card popup -->
+<?php if( $active[0] == 'turnon' && is_front_page() ) { ?>
+	<div style="display: none;">
+		<div class='ajax popup' >
+			<a href="<?php echo $btnLink; ?>">
+				<?php echo $offer; ?>
+			</a>
+		<br>
+			<div class="view-btn">
+				<a href="<?php echo $btnLink; ?>"><?php echo $btnText; ?></a>
+			</div>
+		</div>
+	</div>
+<?php } ?>
+
+
 <div id="topDiv"></div>
 <div id="overlaydiv"><a class="closeOverlay" href="#"><i class="far fa-times-circle"></i><span style="display:none;">Close</span></a></div>
 <div class="smokebg">

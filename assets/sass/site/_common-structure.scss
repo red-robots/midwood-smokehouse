@@ -18,6 +18,29 @@ div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
 .clear:before, .clear:after { content: " "; display: table; }
 .clear { *zoom: 1; }
 .clear {clear: both;}
+
+.popup {
+  text-align: center;
+  a {
+  	color: #000;
+  	text-decoration: none;
+  }
+  .view-btn {
+	  width: auto;
+	  display: inline-block;
+	  margin: 20px auto;
+	  a {
+		  width: auto;
+		  display: block;
+		  background-color: #b60f0f;
+		  color: #fff;
+		  padding: 10px 20px;
+		  border-radius: 3px;
+		  text-decoration: none;
+		  color: #fff;
+		}
+	}
+}
 body {
 	position: relative;
 	background: url("images/darkwood.png") top center repeat-x;
