@@ -77,12 +77,12 @@ $btnLink = get_field('button_link', 'option');
 <?php if( $active[0] == 'turnon' && is_front_page() ) { ?>
 	<div style="display: none;">
 		<div class='ajax popup' >
-			<a href="<?php echo $btnLink; ?>">
+			<a href="<?php echo $btnLink; ?>" target="_blank">
 				<?php echo $offer; ?>
 			</a>
 		<br>
 			<div class="view-btn">
-				<a href="<?php echo $btnLink; ?>"><?php echo $btnText; ?></a>
+				<a href="<?php echo $btnLink; ?>" target="_blank"><?php echo $btnText; ?></a>
 			</div>
 		</div>
 	</div>
