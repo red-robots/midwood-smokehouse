@@ -125,14 +125,20 @@ a,.btn,input[type="submit"],button {
 	margin: 0 auto;
 	width: 165px;
 	padding: 34px 0 30px;
+	position: relative;
 	@include tab {
 		width: 200px;
 		padding: 30px 0;
+		float: none;
+		top: 0;
 	}
 	a, img {
 		width: 100%;
 		height: auto;
 		float: left;
+	}
+	@media screen and (max-width:400px) {
+		margin-left: -30%;
 	}
 }
 .orderNowInfo {
@@ -363,7 +369,7 @@ a,.btn,input[type="submit"],button {
 }
 .site-header {
 	position: relative;
-	z-index: 20;
+	z-index: 305;
 }
 .site-footer {
 	width: 100%;

@@ -45,7 +45,8 @@ add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 // Change Link
 function loginpage_custom_link() {
-	return the_permalink();
+	//return the_permalink();
+  return get_site_url();
 }
 add_filter('login_headerurl','loginpage_custom_link');
 
