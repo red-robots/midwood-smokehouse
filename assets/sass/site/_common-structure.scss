@@ -393,3 +393,14 @@ animation: slide 60s linear infinite;
     transform: translate3d(-1700px, 0, 0);
   }
 }
+
+@media screen and (max-width: 600px) {
+	#wpadminbar {
+	    position: absolute;
+	    top: -46px;
+	}	
+	#cboxWrapper {
+		max-width: 100%!important;
+		width: 100%!important;
+	}
+}

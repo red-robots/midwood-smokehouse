@@ -462,6 +462,14 @@ body.home .site-content.wrapper {
 	padding: 0 30px 50px;
 	position: relative;
 	z-index: 20;
+	.menuflexrow {
+		@include flexbox();
+		@include flexbox-wrap(wrap);
+		@include flexbox-direction(row);
+		@include flexbox-justify(center);
+		@include flexbox-align-content(center);
+		@include flexbox-align-items(center);
+	}
 }
 .menubox {
 	box-sizing: border-box;

@@ -1923,6 +1923,8 @@ a,.btn,input[type="submit"],button{-webkit-transition:all ease-out .3s;transitio
 100%{-webkit-transform:translate3d(-1700px,0,0);transform:translate3d(-1700px,0,0)}
 }@keyframes slide{0%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 100%{-webkit-transform:translate3d(-1700px,0,0);transform:translate3d(-1700px,0,0)}
+}@media screen and (max-width:600px){#wpadminbar{position:absolute;top:-46px}
+#cboxWrapper{max-width:100% !important;width:100% !important}
 }.site{overflow-x:hidden;overflow-y:auto}
 @media screen and (min-width:768px){.flexrow{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 }.flexrow .flexcol{position:relative;box-sizing:border-box}
@@ -2016,6 +2018,7 @@ body.home .site-content.wrapper{max-width:100%;padding-left:0;padding-right:0}
 .menus-content:after{background-image:url("images/grilled-chicken.png");background-position:top right;right:0}
 .menus-content .site-main{position:relative;z-index:20}
 .menus-options{max-width:800px;width:100%;margin:0 auto;padding:0 30px 50px;position:relative;z-index:20}
+.menus-options .menuflexrow{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .menubox{box-sizing:border-box;position:relative}
 @media(min-width:768px){.menubox{width:50%}
 }.menubox .inside{padding:20px;position:relative;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}

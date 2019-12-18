@@ -11,7 +11,7 @@ get_header(); ?>
 			<?php  
 			if( $menus_links = get_field("menus_links") ) { ?>
 			<div class="menus-options clear">
-				<div class="flexrow">
+				<div class="menuflexrow">
 				<?php $i=1; foreach ($menus_links as $m) { 
 					$title = $m['title']; 
 					$type = $m['url_type'];
