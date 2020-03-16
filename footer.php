@@ -63,7 +63,7 @@
 
 <?php wp_footer(); 
 $active = get_field('toggle_on', 'option');
-if( $active[0] == 'turnon' && is_front_page() ) {
+//if( $active[0] == 'turnon' && is_front_page() ) {
 ?>
 	<script type="text/javascript">
 		jQuery(document).ready(function ($) {
@@ -71,7 +71,7 @@ if( $active[0] == 'turnon' && is_front_page() ) {
 			$.colorbox({inline:true, href:".ajax"});
 		});
 	</script>
-<?php } ?>
+<?php //} ?>
 
 </body>
 </html>

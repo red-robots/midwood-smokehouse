@@ -88,6 +88,14 @@ $btnLink = get_field('button_link', 'option');
 	</div>
 <?php } ?>
 
+<div style='display:none'>
+	<div id='inline_content' class="ajax popup">
+		<a href="https://direct.chownow.com/order/1482/locations" target="_blank">
+			<img src="<?php bloginfo('template_url'); ?>/images/curbside.jpg">
+		</a>
+	</div>
+</div>
+
 
 <div id="topDiv"></div>
 <div id="overlaydiv"><a class="closeOverlay" href="#"><i class="far fa-times-circle"></i><span style="display:none;">Close</span></a></div>
