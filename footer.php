@@ -65,13 +65,14 @@
 $active = get_field('toggle_on', 'option');
 //if( $active[0] == 'turnon' && is_front_page() ) {
 ?>
+<?php if(is_front_page()) { ?>
 	<script type="text/javascript">
 		jQuery(document).ready(function ($) {
 			// Popup
 			$.colorbox({inline:true, href:".ajax"});
 		});
 	</script>
-<?php //} ?>
+<?php } ?>
 
 </body>
 </html>
