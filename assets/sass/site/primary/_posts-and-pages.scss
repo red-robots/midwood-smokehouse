@@ -124,6 +124,14 @@ body.home .site-content.wrapper {
 			line-height: 1.5;
 		}
 	}
+	a {
+		display: inline-block;
+		color: $color-orange;
+		text-decoration: underline;
+		&:hover {
+			color: #f9764c;
+		}
+	}
 }
 .featured-testimonial {
 	background: url("images/midwood-pattern.png") top center repeat-y;

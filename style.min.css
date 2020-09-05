@@ -1951,7 +1951,9 @@ body.home .site-content.wrapper{max-width:100%;padding-left:0;padding-right:0}
 @media(min-width:768px){.location-info .name{font-size:18px}
 }.location-info .address{font-size:16px;line-height:1.6;width:100%;text-align:center}
 @media(min-width:768px){.location-info .address{font-size:13px;line-height:1.5}
-}.featured-testimonial{background:url("images/midwood-pattern.png") top center repeat-y;background-size:cover;position:relative;top:-12px;z-index:8}
+}.location-info a{display:inline-block;color:#c54319;text-decoration:underline}
+.location-info a:hover{color:#f9764c}
+.featured-testimonial{background:url("images/midwood-pattern.png") top center repeat-y;background-size:cover;position:relative;top:-12px;z-index:8}
 .featured-testimonial .wrapper{width:80%}
 @media(min-width:768px){.featured-testimonial .wrapper{width:100%}
 }.featured-testimonial .midwrap{padding:50px 0 45px;max-width:600px;width:100%;margin:0 auto}
