@@ -29,6 +29,10 @@ get_header(); ?>
 				$phone = get_field('phone');
 				$map = get_field('map');
 				$booknow = get_field('booknow');
+				$booknowLabel = ( isset($booknow['title']) && $booknow['title'] ) ? $booknow['title']:'';
+				$booknowLink = ( isset($booknow['url']) && $booknow['url'] ) ? $booknow['url']:'';
+				$booknowTarget = ( isset($booknow['target']) && $booknow['target'] ) ? $booknow['target']:'_self';
+
 				$hours = get_field('hours'); ?>
 				<div class="details text-center">
 					<div class="inside">
@@ -47,8 +51,8 @@ get_header(); ?>
 							<?php if ($map) { ?>
 							<div class="map orangetxt"><a href="<?php echo $map ?>" target="_blank">&ndash; MAP &ndash;</a></div>	
 							<?php } ?>
-							<?php if ($booknow) { ?>
-							<div class="booknow orangetxt"><a href="<?php echo $booknow ?>" target="_blank">&ndash; BOOK NOW &ndash;</a></div>	
+							<?php if ($booknowLink) { ?>
+							<div class="booknow orangetxt"><a href="<?php echo $booknowLink ?>" target="<?php echo $booknowTarget ?>">&ndash; <?php echo $booknowLabel ?> &ndash;</a></div>	
 							<?php } ?>
 						</div>
 						<div class="hours-info">
