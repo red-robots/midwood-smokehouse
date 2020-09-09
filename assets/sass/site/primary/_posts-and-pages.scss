@@ -114,6 +114,14 @@ body.home .site-content.wrapper {
 			font-size: 18px;
 		}
 	}
+	a {
+		display: inline-block;
+		color: $color-orange;
+		text-decoration: underline;
+		&:hover {
+			color: #f9764c!important;
+		}
+	}
 	.address {
 		font-size: 16px;
 		line-height: 1.6;
@@ -123,15 +131,24 @@ body.home .site-content.wrapper {
 			font-size: 13px;
 			line-height: 1.5;
 		}
-	}
-	a {
-		display: inline-block;
-		color: $color-orange;
-		text-decoration: underline;
-		&:hover {
-			color: #f9764c;
+		.button {
+			display: inline-block;
+			text-decoration: none;
+			background-color: $color-orange;
+			color: #FFF;
+			padding: 5px 10px;
+			line-height: 1.2;
+			font-size: 12px;
+			border-radius: 3px;
+			margin-top: 10px;
+			&:hover {
+				opacity: 1!important;
+				color: #FFF!important;
+				background-color: shade($color-orange,30%);
+			}
 		}
 	}
+	
 }
 .featured-testimonial {
 	background: url("images/midwood-pattern.png") top center repeat-y;
