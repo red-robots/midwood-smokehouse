@@ -10,7 +10,7 @@
 			$twitter = get_field('twitter','option');
 			?>
 
-			<?php if ($linkedin || $facebook || $twitter) { ?>
+			<?php if ($instagram || $facebook || $twitter) { ?>
 			<div class="social-links">
 				<div class="wrap">
 					<span class="social-info">
@@ -64,8 +64,8 @@
 
 <?php wp_footer(); 
 $active = get_field('toggle_on', 'option');
-if( $active[0] == 'turnon' && is_front_page() ) {
-?>
+$is_turn_on = ( isset($active[0]) && $active[0] ) ? $active[0] : '';
+if( $is_turn_on == 'turnon' && is_front_page() ) { ?>
 <?php if(is_front_page()) { ?>
 	<script type="text/javascript">
 		jQuery(document).ready(function ($) {

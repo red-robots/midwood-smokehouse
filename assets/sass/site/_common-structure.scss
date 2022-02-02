@@ -147,7 +147,7 @@ a,.btn,input[type="submit"],button {
 	top: 0;
 	right: 0;
 	z-index: 30;
-	transform: translateY(-86%);
+	transform: translateY( calc(50px - 100%) );
 	@include transition(all ease-out .3s);
 	&.open {
 		transform: translateY(0);

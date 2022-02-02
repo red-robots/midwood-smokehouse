@@ -69,12 +69,13 @@ $active = get_field('toggle_on', 'option');
 $offer = get_field('offer', 'option');
 $btnText = get_field('button_text', 'option');
 $btnLink = get_field('button_link', 'option');
+$is_turn_on = ( isset($active[0]) && $active[0] ) ? $active[0] : '';
 // echo '<pre>';
 // print_r($active);
 // echo '</pre>';
  ?>
 <!-- Gift Card popup -->
-<?php if( $active[0] == 'turnon' && is_front_page() ) { ?>
+<?php if( $is_turn_on == 'turnon' && is_front_page() ) { ?>
 	<div style="display: none;">
 		<div class='ajax popup' >
 			<a href="<?php echo $btnLink; ?>" target="_blank">
@@ -106,37 +107,23 @@ $btnLink = get_field('button_link', 'option');
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>
 	<header id="masthead" class="site-header clear" role="banner">
 		<div class="wrapper clear row1">
-			<div class="orderNowInfo">
+
+      <?php $delivery = get_field("delivery_platforms","option"); ?>
+			<?php if ($delivery) { ?>
+      <div class="orderNowInfo">
 				<div class="orderNowText">
-					<?php  
-						$order_logo[] = array(
-								'image'=>get_field('logo_1','option'),
-								'url'=>get_field('logo_1_link','option'),
-								'text'=>get_field('logo_1_text','option')
-							);
-						$order_logo[] = array(
-								'image'=>get_field('logo_2','option'),
-								'url'=>get_field('logo_2_link','option'),
-								'text'=>get_field('logo_2_text','option')
-							);
-					?>
-
-					<?php $j=1; foreach ($order_logo as $o) { 
-						$o_logo = $o['image'];
-						$o_link = $o['url'];
-						$o_text = $o['text'];
-						if($o_logo && $o_link) { ?>
-							<a class="o-info logo<?php echo $j?>" href="<?php echo $o_link ?>" target="_blank">
-								<span class="imgwrap"><img src="<?php echo $o_logo['url'] ?>" alt="<?php echo $o_logo['title'] ?>" /></span>
-								<?php if ($o_text) { ?>
-									<span class="details">
-										<span class="txt1"><?php echo $o_text; ?></span>
-									</span>
-								<?php } ?>
-							</a>
-						<?php $j++; } ?>
-					<?php } ?>
-
+					<?php $j=1; foreach ($delivery as $d) { 
+            if($d['logo'] && $d['url']) { ?>
+              <a class="o-info logo<?php echo $j?>" href="<?php echo $d['url'] ?>" target="_blank">
+                <span class="imgwrap"><img src="<?php echo $d['logo']['url'] ?>" alt="<?php echo $d['logo']['title'] ?>" /></span>
+                <?php if ($d['text']) { ?>
+                  <span class="details">
+                    <span class="txt1"><?php echo $d['text']; ?></span>
+                  </span>
+                <?php } ?>
+              </a>
+            <?php $j++; } ?>
+          <?php } ?>
 				</div>
 				<a href="#" class="orderNowBtn">
 					<span class="lbl">ORDER NOW</span>
@@ -145,6 +132,7 @@ $btnLink = get_field('button_link', 'option');
 					<span class="shadowR"><span></span></span>
 				</a>
 			</div>
+      <?php } ?>
 			
 			<div class="logowrap">
 			<?php if( get_custom_logo() ) { ?>
