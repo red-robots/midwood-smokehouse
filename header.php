@@ -92,7 +92,7 @@ $is_turn_on = ( isset($active[0]) && $active[0] ) ? $active[0] : '';
 <!-- <div style='display:none'>
 	<div id='inline_content' class="ajax popup">
 		<a href="https://direct.chownow.com/order/1482/locations" target="_blank">
-			<img src="<?php bloginfo('template_url'); ?>/images/curbside.jpg">
+			<img src="<?php //bloginfo('template_url'); ?>/images/curbside.jpg">
 		</a>
 	</div>
 </div> -->
@@ -113,9 +113,12 @@ $is_turn_on = ( isset($active[0]) && $active[0] ) ? $active[0] : '';
       <div class="orderNowInfo">
 				<div class="orderNowText">
 					<?php $j=1; foreach ($delivery as $d) { 
-            if($d['logo'] && $d['url']) { ?>
-              <a class="o-info logo<?php echo $j?>" href="<?php echo $d['url'] ?>" target="_blank">
-                <span class="imgwrap"><img src="<?php echo $d['logo']['url'] ?>" alt="<?php echo $d['logo']['title'] ?>" /></span>
+            $brandImg = ( isset($d['logo']) && $d['logo'] ) ? $d['logo'] : '';
+            if($d['url'] || $d['text']) { ?>
+              <a class="o-info logo<?php echo $j?> <?php echo ($brandImg) ? 'has-logo':'no-logo'?>" href="<?php echo $d['url'] ?>" target="_blank">
+                <?php if ( $brandImg ) { ?>
+                  <span class="imgwrap"><img src="<?php echo $brandImg['url'] ?>" alt="<?php echo $brandImg['title'] ?>" /></span>
+                <?php } ?>
                 <?php if ($d['text']) { ?>
                   <span class="details">
                     <span class="txt1"><?php echo $d['text']; ?></span>

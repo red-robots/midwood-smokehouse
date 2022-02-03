@@ -1404,9 +1404,10 @@ a,.btn,input[type=submit],button{-webkit-transition:all ease-out .3s;transition:
 .orderNowInfo{width:230px;position:absolute;top:0;right:0;z-index:30;-webkit-transform:translateY(calc(50px - 100%));transform:translateY(calc(50px - 100%));-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .orderNowInfo.open{-webkit-transform:translateY(0);transform:translateY(0)}
 .orderNowInfo .orderNowText{width:100%;background:#fff;-webkit-box-shadow:0 -5px 11px 0 rgba(0,0,0,.75);box-shadow:0 -5px 11px 0 rgba(0,0,0,.75);position:relative;z-index:11}
-.orderNowInfo .o-info{cursor:pointer;text-decoration:none;display:block;padding:20px 20px 10px;background:transparent;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
-.orderNowInfo .o-info.logo2{padding-bottom:20px}
+.orderNowInfo .o-info{cursor:pointer;text-decoration:none;display:block;padding:15px 20px;background:transparent;border-bottom:1px dashed #ddd;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+.orderNowInfo .o-info.has-logo{padding-bottom:10px}
 .orderNowInfo .o-info:hover{background:#e9e8e8}
+.orderNowInfo .o-info:last-child{border-bottom:0}
 .orderNowInfo .o-info img{width:90px;height:auto}
 .orderNowInfo .imgwrap{display:block;width:100%;text-align:center}
 .orderNowInfo .details{display:block;width:100%;text-align:center;font-size:14px;line-height:1.5}
