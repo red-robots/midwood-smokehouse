@@ -177,6 +177,9 @@ a,.btn,input[type="submit"],button {
     &.has-logo {
       padding-bottom: 10px;
     }
+    &.noLink {
+      cursor: not-allowed;
+    }
 		&:hover {
 			background: #e9e8e8;
 		}

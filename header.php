@@ -114,8 +114,13 @@ $is_turn_on = ( isset($active[0]) && $active[0] ) ? $active[0] : '';
 				<div class="orderNowText">
 					<?php $j=1; foreach ($delivery as $d) { 
             $brandImg = ( isset($d['logo']) && $d['logo'] ) ? $d['logo'] : '';
+            $brandLink = ( isset($d['url']) && $d['url'] ) ? $d['url'] : 'javascript:void(0)';
+            $linkTarget = ( isset($d['url']) && $d['url'] ) ? '_blank' : '_self';
+            $a_class = ($brandImg) ? 'has-logo':'no-logo';
+            $a_class .= ( isset($d['url']) && $d['url'] ) ? ' hasLink':' noLink';
+
             if($d['url'] || $d['text']) { ?>
-              <a class="o-info logo<?php echo $j?> <?php echo ($brandImg) ? 'has-logo':'no-logo'?>" href="<?php echo $d['url'] ?>" target="_blank">
+              <a class="o-info logo<?php echo $j?> <?php echo $a_class?>" href="<?php echo $brandLink ?>" target="<?php echo $linkTarget ?>">
                 <?php if ( $brandImg ) { ?>
                   <span class="imgwrap"><img src="<?php echo $brandImg['url'] ?>" alt="<?php echo $brandImg['title'] ?>" /></span>
                 <?php } ?>

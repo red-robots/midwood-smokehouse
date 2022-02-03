@@ -1406,6 +1406,7 @@ a,.btn,input[type=submit],button{-webkit-transition:all ease-out .3s;transition:
 .orderNowInfo .orderNowText{width:100%;background:#fff;-webkit-box-shadow:0 -5px 11px 0 rgba(0,0,0,.75);box-shadow:0 -5px 11px 0 rgba(0,0,0,.75);position:relative;z-index:11}
 .orderNowInfo .o-info{cursor:pointer;text-decoration:none;display:block;padding:15px 20px;background:transparent;border-bottom:1px dashed #ddd;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .orderNowInfo .o-info.has-logo{padding-bottom:10px}
+.orderNowInfo .o-info.noLink{cursor:not-allowed}
 .orderNowInfo .o-info:hover{background:#e9e8e8}
 .orderNowInfo .o-info:last-child{border-bottom:0}
 .orderNowInfo .o-info img{width:90px;height:auto}
