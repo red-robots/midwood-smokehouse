@@ -55,7 +55,7 @@ get_header();
 		$apple_url = get_field('apple_url'); 
 		$android_app_logo = get_field('android_app_logo'); 
 		$android_url = get_field('android_url'); 
-    if ($order_title) { ?>
+    if ($order_title || ($apple_url || $android_url) ) { ?>
   	<div class="order-online-section clear">
   		<div class="wrapper">
   			<?php if ($order_title) { ?>
