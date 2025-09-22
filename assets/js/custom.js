@@ -6,6 +6,7 @@
  *	Developed by: Austin Crane	
  *	Designed by: Austin Crane
  */
+
 jQuery(document).ready(function ($) {
   /*
   *
@@ -16,12 +17,12 @@ jQuery(document).ready(function ($) {
   $all_oembed_videos.each(function () {
     $(this).removeAttr('height').removeAttr('width').wrap("<div class='embed-container'></div>");
   });
+
   /*
   *
   *	Flexslider
   *
   ------------------------------------*/
-
   $('.flexslider').flexslider({
     animation: "slide"
   }); // end register flexslider
@@ -31,14 +32,13 @@ jQuery(document).ready(function ($) {
   *	Colorbox
   *
   ------------------------------------*/
-
   $('a.gallery').colorbox({
     rel: 'gal',
     width: '80%',
     height: '80%'
   });
-  /* Slick Carousel */
 
+  /* Slick Carousel */
   $('.swiper').slick({
     dots: true,
     infinite: true,
@@ -47,12 +47,12 @@ jQuery(document).ready(function ($) {
     centerMode: true,
     variableWidth: true
   });
+
   /*
   *
   *	Equal Heights Divs
   *
   ------------------------------------*/
-
   $('.js-blocks').matchHeight();
   $(document).on("click", "#toggleMenu", function () {
     $(this).toggleClass('open');
@@ -61,7 +61,6 @@ jQuery(document).ready(function ($) {
     $('.site-header .logo').toggleClass('fixed');
     var parentdiv = $(".mobile-navigation").outerHeight();
     var mobile_nav_height = $(".mobile-main-nav").outerHeight();
-
     if (mobile_nav_height > parentdiv) {
       $('.mobile-navigation').addClass("overflow-height");
     }
@@ -70,7 +69,6 @@ jQuery(document).ready(function ($) {
   $(window).resize(function () {
     ribbon_edges();
   });
-
   function ribbon_edges() {
     var img = $("img.ribbon-edge").outerWidth();
     var a = parseInt(img) - 2;
@@ -78,12 +76,10 @@ jQuery(document).ready(function ($) {
     $("img.ribbon-edge.left").css('left', wi);
     $("img.ribbon-edge.right").css('right', wi);
   }
-
   $(document).on("click", ".orderNowBtn", function (e) {
     e.preventDefault();
     $(".orderNowInfo").toggleClass('open');
     $(this).toggleClass('active');
-
     if ($(this).hasClass('active')) {
       $(this).find('span.lbl').text('CLOSE');
     } else {
@@ -95,13 +91,11 @@ jQuery(document).ready(function ($) {
     $("#site-navigation").toggleClass('open');
     $(this).toggleClass('open');
   });
-
   if ($(".iframediv").length > 0) {
     $(".iframediv").each(function () {
       $(this).appendTo("#topDiv");
     });
   }
-
   $(document).on("click", ".iframeData", function (e) {
     e.preventDefault();
     var id = $(this).attr('href');
